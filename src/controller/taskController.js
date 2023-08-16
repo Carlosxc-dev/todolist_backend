@@ -24,7 +24,6 @@ const updateTask = async (request, response) => {
 
 const number_task = async(req, res) => {
   const [number] = await taskmodel.number_task();
-  console.log(number['COUNT(*)']);
   return res.status(200).json(number['COUNT(*)']);
 }
 
