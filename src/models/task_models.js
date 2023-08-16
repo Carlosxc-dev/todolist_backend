@@ -29,10 +29,18 @@ const updateTask = async (id, task) => {
   return updatedTask;
 };
 
+const number_task = async () =>{
+  const query = 'SELECT COUNT(*) FROM task'
+  const [number] = await connection.execute(query);
+
+  return number;
+}
+
 module.exports = {
   getAll,
   createTask,
   deleteTask,
   updateTask,
+  number_task,
 };
 
