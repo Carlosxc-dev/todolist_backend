@@ -1,3 +1,4 @@
+// valida se o campo do nome da tarefa tem alguns texto
 const validateFieldTitle = (request, response, next) => {
     const { body } = request;
   
@@ -12,6 +13,7 @@ const validateFieldTitle = (request, response, next) => {
     next();
   };
   
+  // valida de o campo de status da tarefa nao esta vazia ou indefinida
   const validateFieldStatus = (request, response, next) => {
     const { body } = request;
   
@@ -26,6 +28,7 @@ const validateFieldTitle = (request, response, next) => {
     next();
   };
   
+  // exporta as funcoes para outros aquivos
   module.exports = {
     validateFieldStatus,
     validateFieldTitle,
